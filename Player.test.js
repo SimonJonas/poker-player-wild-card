@@ -153,7 +153,7 @@ game_state_many_players={
             "hole_cards": [                         // The cards of the player. This is only visible for your own player
                                                     //     except after showdown, when cards revealed are also included.
                 {
-                    "rank": "6",                    // Rank of the card. Possible values are numbers 2-10 and J,Q,K,A
+                    "rank": "K",                    // Rank of the card. Possible values are numbers 2-10 and J,Q,K,A
                     "suit": "hearts"                // Suit of the card. Possible values are: clubs,spades,hearts,diamonds
                 },
                 {
@@ -213,7 +213,7 @@ test('return number', () => {
   }
   Player.betRequest(game_state,  bet);
   expect(Number.isInteger(result)=== true);
-  expect(Number.isInteger(result)=== true);
+  expect(result>0);
 });
 
 test('many players no bet', () => {
